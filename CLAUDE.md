@@ -50,28 +50,3 @@ dart run flutter_launcher_icons
 
 # Check code quality
 flutter analyze
-```
-
-### Testing
-- Unit tests: `test/calculator_test.dart`, `test/designer_test.dart`
-- Run specific test: `flutter test test/calculator_test.dart`
-
-## Platform Support
-
-Primary targets: macOS and Windows desktop applications
-Secondary: Web (coming soon)
-
-## Dependencies
-
-Key packages:
-- `mustachex` - Template rendering
-- `window_manager` - Desktop window management
-- `intl` - Internationalization
-- `flutter_lints` - Code quality
-
-## Important Notes
-
-- ID mapping changes documented in `.github/copilot-instructions.md`
-- Templates stored in `lib/servers/designcter/template/`
-- Assets configuration in `pubspec.yaml` includes template directory
-- Window management uses conditional imports for web compatibility

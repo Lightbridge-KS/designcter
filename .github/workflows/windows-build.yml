@@ -78,6 +78,22 @@ jobs:
           Get-ChildItem -Path "build\windows\x64\runner\Release" -Recurse | Select-Object Name, FullName
           Write-Host "`nDLL files specifically:"
           Get-ChildItem -Path "build\windows\x64\runner\Release\*.dll" | Select-Object Name
+
+      # Download Visual C++ Redistributables for bundling
+      - name: Download Visual C++ Redistributables
+        shell: pwsh
+        run: |
+          $vcRedistUrl = "https://aka.ms/vs/17/release/vc_redist.x64.exe"
+          $vcRedistPath = "windows\installer\vc_redist.x64.exe"
+          Write-Host "Downloading Visual C++ Redistributables..."
+          Invoke-WebRequest -Uri $vcRedistUrl -OutFile $vcRedistPath
+          Write-Host "Visual C++ Redistributables downloaded to: $vcRedistPath"
+          if (Test-Path $vcRedistPath) {
+            Write-Host "File size: $((Get-Item $vcRedistPath).Length) bytes"
+          } else {
+            Write-Error "Failed to download Visual C++ Redistributables"
+            exit 1
+          }
                   
       # Package Windows app with Inno Setup
       - name: Install Inno Setup
