@@ -11,6 +11,7 @@ on:
       - 'pubspec.yaml'    # Dependencies
       - 'pubspec.lock'    # Dependency lock file
       - 'analysis_options.yaml'  # Dart analysis config
+      - '.github/workflows/**'
   pull_request:
     branches: [ "main", "dev" ]
     # Only run when these paths change
@@ -20,6 +21,7 @@ on:
       - 'pubspec.yaml'    # Dependencies
       - 'pubspec.lock'    # Dependency lock file
       - 'analysis_options.yaml'  # Dart analysis config
+      - '.github/workflows/**'
 
 permissions:
   contents: write  # This gives permission to create releases
