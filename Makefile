@@ -7,5 +7,8 @@ help:
 icons:
 	dart run flutter_launcher_icons
 
+build-web-local:
+	flutter build web --no-web-resources-cdn --release
+
 # Default target (runs when you just type 'make')
 .DEFAULT_GOAL := help

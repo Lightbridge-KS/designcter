@@ -340,9 +340,11 @@ class MaterialTheme {
      useMaterial3: true,
      brightness: colorScheme.brightness,
      colorScheme: colorScheme,
+     fontFamily: 'Roboto',
      textTheme: textTheme.apply(
        bodyColor: colorScheme.onSurface,
        displayColor: colorScheme.onSurface,
+       fontFamily: 'Roboto',
      ),
      scaffoldBackgroundColor: colorScheme.surface,
      canvasColor: colorScheme.surface,
