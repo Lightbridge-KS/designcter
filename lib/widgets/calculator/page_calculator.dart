@@ -1,3 +1,4 @@
+import 'package:designcter/widgets/calculator/app_adrenal_washout_calculator.dart';
 import 'package:flutter/material.dart';
 import '../components/appbarbundle.dart';
 import 'app_mean.dart';
@@ -40,6 +41,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             SizedBox(height: 32),
             AppSpineCalculator(),
             SizedBox(height: 32),
+            AppAdrenalWashoutCalculator(),
           ],
         ),
       ),
