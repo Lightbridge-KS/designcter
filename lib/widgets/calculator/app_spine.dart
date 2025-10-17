@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../servers/calculator/spine_calculator.dart';
+import '../../services/calculator/spine_calculator.dart';
 import '../components/buttons.dart';
 
 class AppSpineCalculator extends StatefulWidget {

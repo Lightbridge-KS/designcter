@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../servers/calculator/mean_calculator.dart';
+import '../../services/calculator/mean_calculator.dart';
 import '../components/buttons.dart';
 
 class AppMeanCalculator extends StatefulWidget {

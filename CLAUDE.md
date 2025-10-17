@@ -13,15 +13,15 @@ The application follows a modular Flutter architecture:
 ### Core Structure
 - **Main App**: `lib/main.dart` - Entry point with theme management and navigation
 - **Servers**: Business logic modules
-  - `lib/servers/calculator/` - Medical calculators (mean, spine, volume)
-  - `lib/servers/designcter/` - Protocol design with Mustache templates
+  - `lib/services/calculator/` - Medical calculators (mean, spine, volume)
+  - `lib/services/designcter/` - Protocol design with Mustache templates
 - **Widgets**: UI components organized by feature
   - `lib/widgets/calculator/` - Calculator UI pages
   - `lib/widgets/design/` - Protocol design interfaces
   - `lib/widgets/components/` - Reusable UI components
 
 ### Key Components
-- **Template System**: Uses Mustache templating (`lib/servers/designcter/template/`)
+- **Template System**: Uses Mustache templating (`lib/services/designcter/template/`)
 - **Cross-platform**: Desktop-focused with web support
 - **Window Management**: Conditional imports for desktop window management
 - **Theme System**: Dynamic theme switching with brown/green/blue options
@@ -89,6 +89,6 @@ Key packages:
 ## Important Notes
 
 - ID mapping changes documented in `.github/copilot-instructions.md`
-- Templates stored in `lib/servers/designcter/template/`
+- Templates stored in `lib/services/designcter/template/`
 - Assets configuration in `pubspec.yaml` includes template directory
 - Window management uses conditional imports for web compatibility

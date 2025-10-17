@@ -154,7 +154,7 @@ class Designer {
     }
 
     // Load the mustache template
-    final templateString = await rootBundle.loadString('lib/servers/designcter/template/temp_ct.mustache');
+    final templateString = await rootBundle.loadString('lib/services/designcter/template/temp_ct.mustache');
     final template = Template(templateString, htmlEscapeValues: false);
 
     // Prepare data for template
@@ -200,7 +200,7 @@ class Designer {
     }
 
     // Load the mustache template
-    final templateString = await rootBundle.loadString('lib/servers/designcter/template/temp_mr.mustache');
+    final templateString = await rootBundle.loadString('lib/services/designcter/template/temp_mr.mustache');
     final template = Template(templateString, htmlEscapeValues: false);
 
     // Prepare data for template
