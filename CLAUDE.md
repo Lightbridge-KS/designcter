@@ -12,13 +12,13 @@ The application follows a modular Flutter architecture:
 
 ### Core Structure
 - **Main App**: `lib/main.dart` - Entry point with theme management and navigation
-- **Servers**: Business logic modules
-  - `lib/services/calculator/` - Medical calculators (mean, spine, volume)
+- **Services**: Business logic modules
+  - `lib/services/calculator/` - Medical calculators (mean, spine, prostate volume, adrenal washout)
   - `lib/services/designcter/` - Protocol design with Mustache templates
 - **Widgets**: UI components organized by feature
-  - `lib/widgets/calculator/` - Calculator UI pages
+  - `lib/widgets/calculator/` - Calculator UI pages (mean, spine, prostate volume, adrenal washout)
   - `lib/widgets/design/` - Protocol design interfaces
-  - `lib/widgets/components/` - Reusable UI components
+  - `lib/widgets/components/` - Reusable UI components (buttons, app bar)
 
 ### Key Components
 - **Template System**: Uses Mustache templating (`lib/services/designcter/template/`)
@@ -26,6 +26,18 @@ The application follows a modular Flutter architecture:
 - **Window Management**: Conditional imports for desktop window management
 - **Theme System**: Dynamic theme switching with brown/green/blue options
 - **Offline Fonts**: Local Roboto font family configured for hospital intranet deployment
+
+### Calculator Apps
+All calculator apps follow a consistent pattern with input fields (left), output field (right), and action buttons:
+- **Mean Calculator** (`app_mean.dart`): Calculates mean from space/comma-separated numbers
+- **Prostate Volume Calculator** (`app_prostate_volume.dart`): Calculates prostate volume from 3 perpendicular diameters
+- **Spine Height Loss Calculator** (`app_spine.dart`): Calculates compression fracture severity from vertebral heights
+- **Adrenal Washout Calculator** (`app_adrenal_washout_calculator.dart`): Calculates APW/RPW from CT Hounsfield units
+
+Common features:
+- Generate button: Triggers calculation
+- Copy button: Copies output to clipboard
+- Reset button: Clears all input/output fields (maintains independent state per calculator)
 
 ## GitHub Actions Workflows
 

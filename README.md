@@ -1,12 +1,12 @@
 # DesignCTER
 
-> **A Cross-platform application for Design CT Protocol in Emergency Department**
+> **A Cross-platform application for Design CT Protocol in Emergency Department and Radiology Calculators**
 
 ---
 
 - **Windows & MacOS app:** [Download ⬇️](https://github.com/Lightbridge-KS/designcter/releases)
 
-- **Web app:** Coming Soon
+- **Web app:** [DesignCTER](https://designcter.web.app)
 
 ---
 
