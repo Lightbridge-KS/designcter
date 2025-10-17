@@ -25,6 +25,8 @@ on:
       - 'pubspec.lock'    # Dependency lock file
       - 'analysis_options.yaml'  # Dart analysis config
       - '.github/workflows/macos-build.yml'
+  release:
+    types: [published]
 
 permissions:
   contents: write  # This gives permission to create releases
