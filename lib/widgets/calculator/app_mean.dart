@@ -27,6 +27,13 @@ class _AppMeanCalculatorState extends State<AppMeanCalculator> {
     });
   }
 
+  void _resetInputs() {
+    setState(() {
+      _inputController.clear();
+      _outputController.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -80,10 +87,20 @@ class _AppMeanCalculatorState extends State<AppMeanCalculator> {
                   ),
                   const SizedBox(height: 8),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GenerateButton(onPressed: _calculate),
-                      const SizedBox(width: 8),
-                      CopyButton(controller: _outputController),
+                      Row(
+                        children: [
+                          GenerateButton(onPressed: _calculate),
+                          const SizedBox(width: 8),
+                          CopyButton(controller: _outputController),
+                        ],
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: _resetInputs,
+                        icon: const Icon(Icons.refresh),
+                        label: const Text('Reset'),
+                      ),
                     ],
                   ),
                 ],

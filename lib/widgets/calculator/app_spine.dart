@@ -32,6 +32,14 @@ class _AppSpineCalculatorState extends State<AppSpineCalculator> {
     });
   }
 
+  void _resetInputs() {
+    setState(() {
+      _normalController.clear();
+      _collapsedController.clear();
+      _outputController.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -102,10 +110,20 @@ class _AppSpineCalculatorState extends State<AppSpineCalculator> {
                   ),
                   const SizedBox(height: 8),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GenerateButton(onPressed: _calculate),
-                      const SizedBox(width: 8),
-                      CopyButton(controller: _outputController),
+                      Row(
+                        children: [
+                          GenerateButton(onPressed: _calculate),
+                          const SizedBox(width: 8),
+                          CopyButton(controller: _outputController),
+                        ],
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: _resetInputs,
+                        icon: const Icon(Icons.refresh),
+                        label: const Text('Reset'),
+                      ),
                     ],
                   ),
                 ],
